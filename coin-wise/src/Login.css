@@ -1,59 +1,80 @@
 /* Login.css */
+
+body {
+  margin: 0;
+  overflow: hidden; /* Prevent scrolling */
+}
+
+html {
+  height: 100%;
+}
+
 .container {
-    max-width: 40%;
-    margin: 0 auto;
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    background-color: #fff;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-  }
-  
-  h2 {
-    font-size: 24px;
-    margin-bottom: 20px;
-    color: #4285f4;
-  }
-  
-  .form-group {
-    margin-bottom: 15px;
-  }
-  
-  label {
-    display: block;
-    font-size: 14px;
-    font-weight: 600;
-    margin-bottom: 5px;
-    color: #333;
-  }
-  
-  input {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 3px;
-    font-size: 16px;
-  }
-  
-  button {
-    background-color: #4285f4;
-    color: #fff;
-    border: none;
-    border-radius: 3px;
-    padding: 12px 20px;
-    font-size: 16px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: background-color 0.3s;
-  }
-  
-  button:hover {
-    background-color: #357ae8;
-  }
-  
-  .error-message {
-    color: red;
-    font-size: 14px;
-    margin-top: 10px;
-  }
-  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  border-radius: 5px;
+  background-color: rgba(46, 144, 0, 1);;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  height: 100vh;
+  width: 100%;
+
+}
+
+.form-container {
+  width: 100%;
+  border-radius: 10px;
+  max-width: 400px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  height: 90%; /* Set the height to take up the entire screen */
+  margin-left: auto; /* Push the form-container to the right */
+  margin-right: 200px; /* Add some right margin for better appearance */
+}
+
+h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: rgba(46, 144, 0, 1); /* Updated color */
+}
+
+button {
+  background-color: rgba(46, 144, 0, 1);
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  padding: 12px 20px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: rgba(34, 105, 0, 1);
+}
+
+.error-message {
+  color: red;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+label {
+  font-size: 16px;
+  margin-bottom: 8px;
+  color: rgba(46, 144, 0, 1);
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+}

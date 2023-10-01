@@ -34,10 +34,13 @@ class Login extends Component {
   render() {
     return (
       <div className="container">
+         <div className="form-container"> 
         <h2>Login</h2>
         <form onSubmit={this.handleSubmit}>
           <div className="form-group">
-            <label htmlFor="username">Username</label>
+            <div>
+              <label htmlFor="username">Username</label>
+            </div>
             <input
               type="text"
               id="username"
@@ -48,7 +51,9 @@ class Login extends Component {
             />
           </div>
           <div className="form-group">
-            <label htmlFor="password">Password</label>
+            <div>
+              <label htmlFor="password">Password</label>
+            </div>
             <input
               type="password"
               id="password"
@@ -61,6 +66,7 @@ class Login extends Component {
           <button type="submit">Login</button>
         </form>
         {this.state.error && <p className="error-message">{this.state.error}</p>}
+        </div>
       </div>
     );
   }
