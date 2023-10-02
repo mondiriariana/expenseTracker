@@ -16,18 +16,17 @@ html {
   justify-content: center;
   margin: 0;
   border-radius: 5px;
-  background-color: rgba(46, 144, 0, 1);;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  background-color: rgba(46, 144, 0, 1);
+  box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);
   height: 100vh;
   width: 100%;
-
 }
 
 .form-container {
   width: 100%;
   border-radius: 10px;
   max-width: 400px;
-  background-color: white;
+  background-color: rgba(245, 245, 245, 1);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -53,6 +52,7 @@ button {
   font-weight: 600;
   cursor: pointer;
   transition: background-color 0.3s;
+  margin-top: 10px; /* Added spacing at the top of the button */
 }
 
 button:hover {
@@ -77,4 +77,24 @@ input {
   border: 1px solid #ddd;
   border-radius: 5px;
   font-size: 16px;
+  margin-bottom: 10px; /* Added spacing at the bottom of the input */
+}
+
+.additional-links {
+  display: flex;
+  flex-direction: column; /* Change to a column layout */
+  align-items: center; /* Center the links horizontally */
+  margin-top: 20px; /* Adjust top margin for spacing */
+}
+
+.additional-links a {
+  color: rgba(46, 144, 0, 1);
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.3s;
+  margin-bottom: 10px; /* Add bottom margin for spacing */
+}
+
+.additional-links a:hover {
+  color: rgba(34, 105, 0, 1);
 }
