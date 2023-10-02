@@ -1,7 +1,7 @@
 // Navbar.js
 import React, { useState, useEffect, useRef } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faMoneyBill, faHome, faInfoCircle, faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import { faIdCard, faMoneyBill, faHome, faInfoCircle, faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import './Navbar.css';
 
 const Navbar = () => {
@@ -45,6 +45,7 @@ const Navbar = () => {
       <ul className={isNavbarOpen ? 'open' : ''}>
         <div className="spacing">
             <li>
+            {/* will use our logo here but faMoney is a place holder*/}
             <FontAwesomeIcon icon={faMoneyBill} />CoinWise
             </li>
             <li>

@@ -1,7 +1,9 @@
 // Login.js
 import React, { Component } from 'react';
-import './Login.css'; // Import the CSS file
-import Navbar from './Navbar'; // Import the Navbar component
+import './Login.css'; 
+import Navbar from './Navbar'; 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faIdCard} from '@fortawesome/free-solid-svg-icons';
 
 class Login extends Component {
   constructor(props) {
@@ -17,8 +19,7 @@ class Login extends Component {
     e.preventDefault();
     const { email, password } = this.state;
 
-    // Here, you can implement your login logic.
-    // For this example, we'll check if both fields are filled with a sample email and password.
+    // Here we can implement your login logic.
     if (email === 'sample@example.com' && password === 'samplepassword') {
       // Redirect to a success page or perform other actions here.
       alert('Login successful!');
@@ -38,7 +39,12 @@ class Login extends Component {
         <Navbar />
         <div className="container">
           <div className="form-container">
-            <h2>Login</h2>
+            <h2>Sign In</h2>
+            <div className="icon-container-outter">
+              <div className="icon-container-inner">
+                <FontAwesomeIcon icon={faIdCard} size="10x" style={{ color: 'grey' }}/>
+              </div>
+            </div>
             <form onSubmit={this.handleSubmit}>
               <div className="form-group">
                 <div>
@@ -66,7 +72,7 @@ class Login extends Component {
                   required
                 />
               </div>
-              <button type="submit">Login</button>
+              <button type="submit">Sign in</button>
             </form>
             {this.state.error && <p className="error-message">{this.state.error}</p>}
             <div className="additional-links">

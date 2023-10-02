@@ -1,8 +1,7 @@
 /* Login.css */
-
 body {
   margin: 0;
-  overflow: hidden; /* Prevent scrolling */
+  overflow: hidden;
 }
 
 html {
@@ -31,15 +30,15 @@ html {
   flex-direction: column;
   align-items: center;
   padding: 20px;
-  height: 90%; /* Set the height to take up the entire screen */
-  margin-left: auto; /* Push the form-container to the right */
-  margin-right: 200px; /* Add some right margin for better appearance */
+  height: 90%;
+  margin-left: auto;
+  margin-right: 200px;
 }
 
 h2 {
   font-size: 24px;
   margin-bottom: 20px;
-  color: rgba(46, 144, 0, 1); /* Updated color */
+  color: rgba(46, 144, 0, 1);
 }
 
 button {
@@ -52,7 +51,8 @@ button {
   font-weight: 600;
   cursor: pointer;
   transition: background-color 0.3s;
-  margin-top: 10px; /* Added spacing at the top of the button */
+  margin-top: 10px;
+  width: 110%;
 }
 
 button:hover {
@@ -77,14 +77,14 @@ input {
   border: 1px solid #ddd;
   border-radius: 5px;
   font-size: 16px;
-  margin-bottom: 10px; /* Added spacing at the bottom of the input */
+  margin-bottom: 10px;
 }
 
 .additional-links {
   display: flex;
-  flex-direction: column; /* Change to a column layout */
-  align-items: center; /* Center the links horizontally */
-  margin-top: 20px; /* Adjust top margin for spacing */
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
 }
 
 .additional-links a {
@@ -92,9 +92,32 @@ input {
   text-decoration: none;
   font-size: 14px;
   transition: color 0.3s;
-  margin-bottom: 10px; /* Add bottom margin for spacing */
+  margin-bottom: 10px;
 }
 
 .additional-links a:hover {
   color: rgba(34, 105, 0, 1);
+}
+
+.icon-container-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  background-color: white;
+}
+
+.icon-container-outter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background-color: rgb(220, 220, 220);
+  margin-right: 10px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
