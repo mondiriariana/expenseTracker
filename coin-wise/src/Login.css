@@ -1,8 +1,7 @@
 /* Login.css */
-
 body {
   margin: 0;
-  overflow: hidden; /* Prevent scrolling */
+  overflow: hidden;
 }
 
 html {
@@ -16,31 +15,30 @@ html {
   justify-content: center;
   margin: 0;
   border-radius: 5px;
-  background-color: rgba(46, 144, 0, 1);;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  background-color: rgba(46, 144, 0, 1);
+  box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);
   height: 100vh;
   width: 100%;
-
 }
 
 .form-container {
   width: 100%;
   border-radius: 10px;
   max-width: 400px;
-  background-color: white;
+  background-color: rgba(245, 245, 245, 1);
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 20px;
-  height: 90%; /* Set the height to take up the entire screen */
-  margin-left: auto; /* Push the form-container to the right */
-  margin-right: 200px; /* Add some right margin for better appearance */
+  height: 90%;
+  margin-left: auto;
+  margin-right: 200px;
 }
 
 h2 {
   font-size: 24px;
   margin-bottom: 20px;
-  color: rgba(46, 144, 0, 1); /* Updated color */
+  color: rgba(46, 144, 0, 1);
 }
 
 button {
@@ -53,6 +51,8 @@ button {
   font-weight: 600;
   cursor: pointer;
   transition: background-color 0.3s;
+  margin-top: 10px;
+  width: 110%;
 }
 
 button:hover {
@@ -77,4 +77,47 @@ input {
   border: 1px solid #ddd;
   border-radius: 5px;
   font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.additional-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.additional-links a {
+  color: rgba(46, 144, 0, 1);
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.3s;
+  margin-bottom: 10px;
+}
+
+.additional-links a:hover {
+  color: rgba(34, 105, 0, 1);
+}
+
+.icon-container-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  background-color: white;
+}
+
+.icon-container-outter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background-color: rgb(220, 220, 220);
+  margin-right: 10px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
