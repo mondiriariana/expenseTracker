@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Balance Display</title>
+</head>
+<body>
+    <h1>Account Balance:</h1>
+    <pre id="balance-data"></pre>
+    <script>
+        window.addEventListener('DOMContentLoaded', () => {
+            // Make an AJAX request to fetch the balance data
+            fetch("http://localhost:8000/api/balance")
+                .then(response => response.json())
+                .then(data => {
+                    // Update the 'balance-data' pre element with the balance data
+                    const balanceDataElement = document.getElementById('balance-data');
+                    balanceDataElement.textContent = JSON.stringify(data); // Display JSON data as formatted text
+                })
+                .catch(error => console.error('Error:', error));
+        });
+    </script>
+</body>
+</html>

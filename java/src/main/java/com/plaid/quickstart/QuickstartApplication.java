@@ -22,8 +22,11 @@ import com.plaid.quickstart.resources.TransferResource;
 import io.dropwizard.Application;
 import io.dropwizard.configuration.EnvironmentVariableSubstitutor;
 import io.dropwizard.configuration.SubstitutingSourceProvider;
+import io.dropwizard.jersey.setup.JerseyEnvironment;
 import io.dropwizard.setup.Bootstrap;
 import io.dropwizard.setup.Environment;
+import com.plaid.quickstart.filter.CrosFilter;
+
 import java.util.Arrays;
 import java.util.List;
 
@@ -114,6 +117,7 @@ public class QuickstartApplication extends Application<QuickstartConfiguration> 
     environment.jersey().register(new PublicTokenResource(plaidClient));
     environment.jersey().register(new TransactionsResource(plaidClient));
     environment.jersey().register(new TransferResource(plaidClient));
+    environment.jersey().register(com.plaid.quickstart.filter.CrosFilter.class);
   }
 
   protected PlaidApi client() {
