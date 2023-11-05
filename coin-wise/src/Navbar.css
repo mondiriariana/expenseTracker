@@ -71,4 +71,16 @@ body {
       width: 100%;
     }
   }
+
+  /* Add this style to override the default link color */
+a {
+  color: inherit; /* or set the color you prefer */
+  text-decoration: none; /* to remove the underline if you don't want it */
+}
+
+/* Add specific styling for links within your components */
+.link-class {
+  color: black; /* Set the color to black or any other color you prefer */
+  /* Add any other styles as needed */
+}
   

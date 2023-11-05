@@ -2,6 +2,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMoneyBill, faHome, faInfoCircle, faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import { Outlet, Link } from "react-router-dom";
 import './Navbar.css';
 
 const Navbar = () => {
@@ -44,18 +45,24 @@ const Navbar = () => {
       </div>
       <ul className={isNavbarOpen ? 'open' : ''}>
         <div className="spacing">
-            <li>
-            {/* will use our logo here but faMoney is a place holder*/}
+            {/* <li>
+            will use our logo here but faMoney is a place holder
             <FontAwesomeIcon icon={faMoneyBill} />CoinWise
+            </li> */}
+            <li>
+            <Link to="/" ><FontAwesomeIcon icon={faHome} /> Home</Link>
             </li>
             <li>
-            <FontAwesomeIcon icon={faHome} /> Home
+            <Link to="/about"><FontAwesomeIcon icon={faInfoCircle} /> About</Link>
             </li>
             <li>
-            <FontAwesomeIcon icon={faInfoCircle} /> About
+              <Link to="/contactus"><FontAwesomeIcon icon={faEnvelope} /> Contact</Link>
             </li>
             <li>
-            <FontAwesomeIcon icon={faEnvelope} /> Contact
+              <Link to="/login"><FontAwesomeIcon icon={faEnvelope} /> Login</Link>
+            </li>
+            <li>
+            <Link to="/signup"><FontAwesomeIcon icon={faEnvelope} /> SignUp</Link>
             </li>
         </div>
       </ul>
