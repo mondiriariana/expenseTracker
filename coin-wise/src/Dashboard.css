@@ -1,0 +1,121 @@
+/* Dashboard.css */
+
+body {
+  margin: 0;
+  overflow: hidden;
+  font-family: 'Arial', sans-serif;
+}
+
+html {
+  height: 100%;
+}
+
+.dashboard-hero-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow-y: auto;
+}
+
+.dashboard-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 50px;
+  border-radius: 5px;
+  background-color: rgba(245, 245, 245, 1);
+  box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);
+}
+
+.dashboard-content {
+  width: 100%;
+  max-width: 1200px;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.micro-container {
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.micro-card {
+  background-color: rgb(220, 220, 220);
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+}
+
+h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 24px;
+  font-weight: bold;
+  color: #3498db;
+}
+
+.chart-container {
+  width: 100%;
+  max-width: 800px;
+  margin-top: 20px;
+  align-self: center;
+}
+
+.micro-card.combined-card {
+  display: flex;
+  align-items: center;
+  margin: 10px;
+}
+
+.micro-card-item {
+  flex: 1;
+  text-align: center;
+}
+
+.divider {
+  border-left: 1px solid #3498db;
+  height: 100px;
+  margin: 0 10px;
+}
+
+.transaction-list {
+  margin-top: 20px;
+  flex: 1; /* Ensure the transaction-list takes up remaining vertical space */
+  display: flex;
+  flex-direction: column;
+}
+
+.transaction-list h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.transaction-list ul {
+  list-style: none;
+  padding: 0;
+  width: 100%;
+}
+
+.transaction-list li {
+  border-bottom: 1px solid #ccc;
+  padding: 10px 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.transaction-list li:last-child {
+  border-bottom: none;
+}
+
