@@ -1,7 +1,9 @@
-/* ForgotPassword.css */
+/* About.css */
+
 body {
     margin: 0;
     overflow: hidden;
+    font-family: 'Arial', sans-serif;
   }
   
   html {
@@ -21,24 +23,21 @@ body {
     width: 100%;
   }
   
-  .form-container {
-    width: 100%;
-    border-radius: 10px;
-    max-width: 400px;
-    background-color: rgba(245, 245, 245, 1);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  .about-content {
+    text-align: center;
     padding: 20px;
-    height: 90%;
-    margin-left: auto;
-    margin-right: 200px;
+    color: #fff;
   }
   
-  h2 {
-    font-size: 24px;
+  .about-content h2 {
+    font-size: 36px;
     margin-bottom: 20px;
-    color: rgba(46, 144, 0, 1);
   }
   
+  .about-content p {
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 30px;
+    color: #fff;
+  }
   

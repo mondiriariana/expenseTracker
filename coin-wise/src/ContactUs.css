@@ -1,0 +1,70 @@
+/* ContactUs.css */
+
+body {
+  margin: 0;
+  overflow: hidden;
+  font-family: 'Arial', sans-serif;
+}
+
+html {
+  height: 100%;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  border-radius: 5px;
+  background-color: rgba(46, 144, 0, 1);
+  box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);
+  height: 100vh;
+  width: 100%;
+}
+
+.contact-content {
+  text-align: center;
+  padding: 20px;
+  color: #fff;
+}
+
+.contact-content h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin: auto;
+}
+
+.contact-form label {
+  margin-bottom: 5px;
+  color: #fff;
+}
+
+input,
+textarea {
+  padding: 10px;
+  margin-bottom: 15px;
+}
+
+.contact-form button {
+  background-color: #fff;
+  color: rgba(46, 144, 0, 1);
+  border: none;
+  border-radius: 5px;
+  padding: 15px 30px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.contact-form button:hover {
+  background-color: rgba(46, 144, 0, 1);
+  color: #fff;
+}

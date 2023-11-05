@@ -1,7 +1,7 @@
 // ForgotPassword.js
 import React, { Component } from 'react';
-import './ForgotPassword.css'; // Import your CSS file for styling
-import Navbar from './Navbar'; // Assuming you have a Navbar component
+import './ForgotPassword.css'; 
+import Navbar from './Navbar'; 
 
 class ForgotPassword extends Component {
   constructor(props) {

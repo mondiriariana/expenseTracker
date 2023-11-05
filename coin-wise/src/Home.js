@@ -1,7 +1,8 @@
 // Home.js
 import React from 'react';
-import './Home.css'; // Import your CSS file for styling
-import Navbar from './Navbar'; // Assuming you have a Navbar component
+import './Home.css';
+import Navbar from './Navbar'; 
+import { Outlet, Link } from "react-router-dom";
 
 const Home = () => {
   return (
@@ -15,9 +16,6 @@ const Home = () => {
           <button className="cta-button">Learn More</button>
 
         </div>
-      </div>
-      <div className="additional-content">
-        {/* Add more content or features as needed */}
       </div>
     </div>
   );
