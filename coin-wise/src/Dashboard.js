@@ -1,7 +1,7 @@
-// Dashboard.js
 import React, { useEffect } from 'react';
 import './Dashboard.css';
 import Navbar from './Navbar';
+import Notification from './Notification';
 import {
   LineChart,
   Line,
@@ -14,7 +14,6 @@ import {
 } from 'recharts';
 
 const Dashboard = () => {
-  // Sample data for the line chart
   const chartData = [
     { month: 'Jan', moneySpent: 2000 },
     { month: 'Feb', moneySpent: 1500 },
@@ -30,7 +29,6 @@ const Dashboard = () => {
     { month: 'Dec', moneySpent: 2100 },
   ];
 
-  // Sample transaction data
   const transactionsData = [
     { id: 1, description: 'Groceries', amount: 50 },
     { id: 2, description: 'Shopping', amount: 120 },
@@ -38,7 +36,6 @@ const Dashboard = () => {
   ];
 
   useEffect(() => {
-    // Cleanup as needed
     return () => {
       // Cleanup logic if necessary
     };
@@ -47,10 +44,10 @@ const Dashboard = () => {
   return (
     <div className="dashboard-hero-container">
       <Navbar />
+      <Notification />
       <div className="dashboard-container">
         <h1>Dashboard</h1>
         <div className="micro-container">
-          {/* Combined Card for Total Balance, Streak, and Upcoming Bills */}
           <div className="micro-card combined-card">
             <div className="micro-card-item">
               <h3>Total Balance</h3>
@@ -68,7 +65,6 @@ const Dashboard = () => {
             </div>
           </div>
 
-          {/* Line Chart */}
           <div className="chart-container">
             <ResponsiveContainer width="100%" height={400}>
               <LineChart data={chartData}>
@@ -79,7 +75,7 @@ const Dashboard = () => {
                 <Line
                   type="monotone"
                   dataKey="moneySpent"
-                  stroke="#2ecc71" // Green color
+                  stroke="#2ecc71"
                   strokeWidth={2}
                   dot={{ r: 6 }}
                   activeDot={{ r: 8 }}
@@ -98,7 +94,6 @@ const Dashboard = () => {
           </div>
         </div>
 
-        {/* Transaction List */}
         <div className="transaction-list">
           <h2>Transaction List</h2>
           <ul>
@@ -108,8 +103,6 @@ const Dashboard = () => {
                 <span>${transaction.amount}</span>
               </li>
             ))}
-          </ul>
-          <ul>
             <li>hello</li>
             <li>hello</li>
             <li>hello</li>
@@ -121,4 +114,3 @@ const Dashboard = () => {
 };
 
 export default Dashboard;
-
