@@ -1,7 +1,12 @@
+//Dashboard.js
+
 import React, { useEffect } from 'react';
 import './Dashboard.css';
 import Navbar from './Navbar';
 import Notification from './Notification';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {faInfoCircle, faCirclePlus} from '@fortawesome/free-solid-svg-icons';
+import TransactionList from './TransactionList'; 
 import {
   LineChart,
   Line,
@@ -35,6 +40,9 @@ const Dashboard = () => {
     { id: 3, description: 'Dinner', amount: 30 },
   ];
 
+  const streaksData = [{ type: 'No impulse purchases', days: 15 }];
+  // const streaksData = [{}];
+
   useEffect(() => {
     return () => {
       // Cleanup logic if necessary
@@ -50,17 +58,17 @@ const Dashboard = () => {
         <div className="micro-container">
           <div className="micro-card combined-card">
             <div className="micro-card-item">
-              <h3>Total Balance</h3>
+              <h3>Total Balance <FontAwesomeIcon icon={faInfoCircle} title="This is the total amount from your accounts." /></h3>
               <p>$5,000</p>
             </div>
             <div className="divider"></div>
             <div className="micro-card-item">
-              <h3>Streak</h3>
-              <p>15 days</p>
+              <h3>Streaks <FontAwesomeIcon icon={faCirclePlus} title="Click here to add streaks."/></h3>
+              <p>{streaksData.length > 0 ? `${streaksData[0].type}: ${streaksData[0].days} days` : 'Click the Plus to Add Streaks'}</p>
             </div>
             <div className="divider"></div>
             <div className="micro-card-item">
-              <h3>Upcoming Bills</h3>
+              <h3>Upcoming Bills <FontAwesomeIcon icon={faInfoCircle} title="These are your upcoming bills."/></h3>
               <p>$1,200</p>
             </div>
           </div>
@@ -93,21 +101,7 @@ const Dashboard = () => {
             </ResponsiveContainer>
           </div>
         </div>
-
-        <div className="transaction-list">
-          <h2>Transaction List</h2>
-          <ul>
-            {transactionsData.map((transaction) => (
-              <li key={transaction.id}>
-                <span>{transaction.description}</span>
-                <span>${transaction.amount}</span>
-              </li>
-            ))}
-            <li>hello</li>
-            <li>hello</li>
-            <li>hello</li>
-          </ul>
-        </div>
+        <TransactionList transactionsData={transactionsData} />
       </div>
     </div>
   );
