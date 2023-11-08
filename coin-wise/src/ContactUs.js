@@ -9,7 +9,7 @@ const ContactUs = () => {
       <Navbar />
       <div className="contact-content">
         <h2>Contact Us</h2>
-        <p>
+        <p className="home-p">
           Have questions or feedback? Reach out to us using the form below, and we'll get back to you as soon as possible.
         </p>
         <form className="contact-form">

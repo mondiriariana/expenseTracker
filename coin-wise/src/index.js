@@ -7,6 +7,7 @@ import SignUp from "./SignUp";
 import NoPage from "./NoPage";
 import About from "./About";
 import ContactUs from "./ContactUs";
+import Dashboard from "./Dashboard";
 
 
 export default function App() {
@@ -20,6 +21,7 @@ export default function App() {
           <Route path="about" element={<About />} />
           <Route path="*" element={<NoPage />} />
           <Route path="contactus" element={<ContactUs />} />
+          <Route path="dashboard" element={<Dashboard />} />
         </Route>
       </Routes>
     </BrowserRouter>
