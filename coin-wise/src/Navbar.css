@@ -85,9 +85,13 @@ a {
 }
 
 .navbarImage {
-  height: 20px;
-  width: 20px;
+  height: 15px;
+  width: 15px;
   border-radius: 5px;
   box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);
+}
+
+.ulNone{
+  all: unset;
 }
   

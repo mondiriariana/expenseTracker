@@ -74,7 +74,12 @@ const Dashboard = () => {
             </div>
           </div>
 
-          <div className="chart-container">
+          
+        </div>
+      </div>
+      <div className="dashboard-container">
+      <h1>Money Spent by Month</h1>
+      <div className="chart-container">
             <ResponsiveContainer width="100%" height={400}>
               <LineChart data={chartData}>
                 <CartesianGrid strokeDasharray="3 3" />
@@ -101,9 +106,11 @@ const Dashboard = () => {
               </LineChart>
             </ResponsiveContainer>
           </div>
-        </div>
-        <TransactionList transactionsData={transactionsData} />
-      </div>
+          </div>
+          <div className='dashboard-container'>
+            <h1>Recent transactions</h1>
+            <TransactionList transactionsData={transactionsData} />
+          </div>
     </div>
   );
 };

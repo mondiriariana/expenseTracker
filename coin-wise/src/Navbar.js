@@ -47,28 +47,12 @@ const Navbar = () => {
       </div>
       <ul className={isNavbarOpen ? 'open' : ''}>
         <div className="spacing">
-            {/* <li>
-            will use our logo here but faMoney is a place holder
-            <FontAwesomeIcon icon={faMoneyBill} />CoinWise
-            </li> */}
-            <li>
-            <Link to="/" ><img className = "navbarImage" src={CoinWiseImage}></img> CoinWise</Link>
-            </li>
-            <li>
-            <Link to="/" ><FontAwesomeIcon icon={faHome} /> Home</Link>
-            </li>
-            <li>
-            <Link to="/about"><FontAwesomeIcon icon={faInfoCircle} /> About</Link>
-            </li>
-            <li>
-              <Link to="/contactus"><FontAwesomeIcon icon={faEnvelope} /> Contact</Link>
-            </li>
-            <li>
-              <Link to="/login"><FontAwesomeIcon icon={faEnvelope} /> Login</Link>
-            </li>
-            <li>
-            <Link to="/signup"><FontAwesomeIcon icon={faEnvelope} /> SignUp</Link>
-            </li>
+              {/* <Link to="/" ><li><img className = "navbarImage" src={CoinWiseImage}></img> CoinWise</li></Link> */}
+              <Link to="/" ><li><FontAwesomeIcon icon={faHome} /> Home</li></Link>
+              <Link to="/about"><li><FontAwesomeIcon icon={faInfoCircle} /> About</li></Link>
+              <Link to="/contactus"><li><FontAwesomeIcon icon={faEnvelope} /> Contact</li></Link>
+              <Link to="/login"><li><FontAwesomeIcon icon={faEnvelope} /> Login</li></Link>
+              <Link to="/signup"><li><FontAwesomeIcon icon={faEnvelope} /> SignUp</li></Link>
         </div>
       </ul>
     </div>
