@@ -5,7 +5,7 @@ import './Dashboard.css';
 import Navbar from './Navbar';
 import Notification from './Notification';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {faInfoCircle, faCirclePlus} from '@fortawesome/free-solid-svg-icons';
+import {faInfoCircle, faCirclePlus, faFire} from '@fortawesome/free-solid-svg-icons';
 import TransactionList from './TransactionList'; 
 import {
   LineChart,
@@ -40,6 +40,7 @@ const Dashboard = () => {
     { id: 3, description: 'Dinner', amount: 30 },
   ];
 
+  const totalBalanceData = [{money: '1,200' }];
   const streaksData = [{ type: 'No impulse purchases', days: 15 }];
   // const streaksData = [{}];
 
@@ -64,12 +65,12 @@ const Dashboard = () => {
             <div className="divider"></div>
             <div className="micro-card-item">
               <h3>Streaks <FontAwesomeIcon icon={faCirclePlus} title="Click here to add streaks."/></h3>
-              <p>{streaksData.length > 0 ? `${streaksData[0].type}: ${streaksData[0].days} days` : 'Click the Plus to Add Streaks'}</p>
+              <p>{streaksData.length > 0 ? `${streaksData[0].type}: ${streaksData[0].days} days ` : 'Click the Plus to Add Streaks'} <FontAwesomeIcon icon={faFire} /> </p> 
             </div>
             <div className="divider"></div>
             <div className="micro-card-item">
               <h3>Upcoming Bills <FontAwesomeIcon icon={faInfoCircle} title="These are your upcoming bills."/></h3>
-              <p>$1,200</p>
+              <p>{totalBalanceData.length > 0 ? `$${totalBalanceData[0].money}` : 'Click the Plus to Add Streaks'}</p>
             </div>
           </div>
 

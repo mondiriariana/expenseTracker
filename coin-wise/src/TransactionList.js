@@ -14,9 +14,10 @@ const TransactionList = ({ transactionsData }) => {
           
         ))}
       </ul>
-      <p>
-        i dont know why this isnt working
-      </p>
+        {/* Fake data. Why does UL not appear? is it css issue? */}
+        <p>1. Groceries : $50</p>
+        <p>2. Car Payment : $200</p>
+        <p>3. Rent : $600</p>
     </div>
   );
 };

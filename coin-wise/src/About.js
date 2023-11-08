@@ -2,12 +2,14 @@
 import React from 'react';
 import './About.css'; 
 import Navbar from './Navbar'; 
+import CoinWiseImage from './coinwiseimage.png';
 
 const About = () => {
   return (
     <div className="container">
       <Navbar />
       <div className="about-content">
+        <img className = "aboutImage" src={CoinWiseImage}></img>
         <h2>About Us</h2>
         <p>
           Welcome to CoinWise! We are a team of passionate individuals dedicated to helping young adults navigate the challenges of financial independence.
