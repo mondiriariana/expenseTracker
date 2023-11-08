@@ -12,12 +12,27 @@ class SignUp extends Component {
       password: '',
       confirmPassword: '',
       error: '',
+      accountCreated: false,
     };
   }
 
   handleSubmit = (e) => {
     e.preventDefault();
     // Add your SignUp logic here
+
+    // For demonstration purposes, assume account creation was successful
+    // You would replace the following line with your actual account creation logic
+    // Set state to true when the account is successfully created
+    this.setState({ accountCreated: true });
+
+    // Reset the form fields after submission
+    this.setState({
+      username: '',
+      email: '',
+      password: '',
+      confirmPassword: '',
+      error: '',
+    });
   };
 
   handleInputChange = (e) => {
@@ -82,6 +97,8 @@ class SignUp extends Component {
               </label>
               <button type="submit">Sign Up</button>
             </form>
+            
+            {this.state.accountCreated && <p className="success-message">Account created</p>}
             {this.state.error && <p className="error-message">{this.state.error}</p>}
           </div>
         </div>

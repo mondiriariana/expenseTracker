@@ -44,6 +44,7 @@ class ForgotPassword extends Component {
               <button type="submit">Reset Password</button>
             </form>
             {this.state.error && <p className="error-message">{this.state.error}</p>}
+            <i>A link to reset your password will be sent to your email.</i>
           </div>
         </div>
       </div>
