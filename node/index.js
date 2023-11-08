@@ -1,4 +1,4 @@
-'use strict';
+//'use strict';
 
 // read env vars from .env file
 require('dotenv').config();
