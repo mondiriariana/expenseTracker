@@ -2,7 +2,9 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMoneyBill, faHome, faInfoCircle, faEnvelope } from '@fortawesome/free-solid-svg-icons';
-import { Outlet, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
+import CoinWiseImage from './coinwiseimage.png';
+
 import './Navbar.css';
 
 const Navbar = () => {
@@ -49,6 +51,9 @@ const Navbar = () => {
             will use our logo here but faMoney is a place holder
             <FontAwesomeIcon icon={faMoneyBill} />CoinWise
             </li> */}
+            <li>
+            <Link to="/" ><img className = "navbarImage" src={CoinWiseImage}></img> CoinWise</Link>
+            </li>
             <li>
             <Link to="/" ><FontAwesomeIcon icon={faHome} /> Home</Link>
             </li>
