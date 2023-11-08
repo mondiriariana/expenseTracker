@@ -1,7 +1,12 @@
-// Dashboard.js
+//Dashboard.js
+
 import React, { useEffect } from 'react';
 import './Dashboard.css';
 import Navbar from './Navbar';
+import Notification from './Notification';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {faInfoCircle, faCirclePlus, faFire} from '@fortawesome/free-solid-svg-icons';
+import TransactionList from './TransactionList'; 
 import {
   LineChart,
   Line,
@@ -14,7 +19,6 @@ import {
 } from 'recharts';
 
 const Dashboard = () => {
-  // Sample data for the line chart
   const chartData = [
     { month: 'Jan', moneySpent: 2000 },
     { month: 'Feb', moneySpent: 1500 },
@@ -30,15 +34,17 @@ const Dashboard = () => {
     { month: 'Dec', moneySpent: 2100 },
   ];
 
-  // Sample transaction data
   const transactionsData = [
     { id: 1, description: 'Groceries', amount: 50 },
     { id: 2, description: 'Shopping', amount: 120 },
     { id: 3, description: 'Dinner', amount: 30 },
   ];
 
+  const totalBalanceData = [{money: '1,200' }];
+  const streaksData = [{ type: 'No impulse purchases', days: 15 }];
+  // const streaksData = [{}];
+
   useEffect(() => {
-    // Cleanup as needed
     return () => {
       // Cleanup logic if necessary
     };
@@ -47,28 +53,27 @@ const Dashboard = () => {
   return (
     <div className="dashboard-hero-container">
       <Navbar />
+      <Notification />
       <div className="dashboard-container">
         <h1>Dashboard</h1>
         <div className="micro-container">
-          {/* Combined Card for Total Balance, Streak, and Upcoming Bills */}
           <div className="micro-card combined-card">
             <div className="micro-card-item">
-              <h3>Total Balance</h3>
+              <h3>Total Balance <FontAwesomeIcon icon={faInfoCircle} title="This is the total amount from your accounts." /></h3>
               <p>$5,000</p>
             </div>
             <div className="divider"></div>
             <div className="micro-card-item">
-              <h3>Streak</h3>
-              <p>15 days</p>
+              <h3>Streaks <FontAwesomeIcon icon={faCirclePlus} title="Click here to add streaks."/></h3>
+              <p>{streaksData.length > 0 ? `${streaksData[0].type}: ${streaksData[0].days} days ` : 'Click the Plus to Add Streaks'} <FontAwesomeIcon icon={faFire} /> </p> 
             </div>
             <div className="divider"></div>
             <div className="micro-card-item">
-              <h3>Upcoming Bills</h3>
-              <p>$1,200</p>
+              <h3>Upcoming Bills <FontAwesomeIcon icon={faInfoCircle} title="These are your upcoming bills."/></h3>
+              <p>{totalBalanceData.length > 0 ? `$${totalBalanceData[0].money}` : 'Click the Plus to Add Streaks'}</p>
             </div>
           </div>
 
-          {/* Line Chart */}
           <div className="chart-container">
             <ResponsiveContainer width="100%" height={400}>
               <LineChart data={chartData}>
@@ -79,7 +84,7 @@ const Dashboard = () => {
                 <Line
                   type="monotone"
                   dataKey="moneySpent"
-                  stroke="#2ecc71" // Green color
+                  stroke="#2ecc71"
                   strokeWidth={2}
                   dot={{ r: 6 }}
                   activeDot={{ r: 8 }}
@@ -97,28 +102,10 @@ const Dashboard = () => {
             </ResponsiveContainer>
           </div>
         </div>
-
-        {/* Transaction List */}
-        <div className="transaction-list">
-          <h2>Transaction List</h2>
-          <ul>
-            {transactionsData.map((transaction) => (
-              <li key={transaction.id}>
-                <span>{transaction.description}</span>
-                <span>${transaction.amount}</span>
-              </li>
-            ))}
-          </ul>
-          <ul>
-            <li>hello</li>
-            <li>hello</li>
-            <li>hello</li>
-          </ul>
-        </div>
+        <TransactionList transactionsData={transactionsData} />
       </div>
     </div>
   );
 };
 
 export default Dashboard;
-

@@ -4,6 +4,7 @@ import './Login.css';
 import Navbar from './Navbar'; 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faIdCard} from '@fortawesome/free-solid-svg-icons';
+import { Link } from "react-router-dom";
 
 class Login extends Component {
   constructor(props) {
@@ -72,7 +73,7 @@ class Login extends Component {
                   required
                 />
               </div>
-              <button type="submit">Sign in</button>
+              <Link to="/dashboard"><button type="submit" >Sign in</button></Link>
             </form>
             {this.state.error && <p className="error-message">{this.state.error}</p>}
             <div className="additional-links">
