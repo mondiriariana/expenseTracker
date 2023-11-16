@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './Notification.css';
+import { Link } from "react-router-dom";
 
 
   const Notification = () => {
@@ -48,7 +49,6 @@ import './Notification.css';
   
       //onSuccess callback, provide a temporary public_token.
       onSuccess: async function(public_token, metadata) {
-        console.log('Plaid on succces trigered ')
         console.log(' public token: ', public_token);
 
         try{
@@ -73,14 +73,10 @@ import './Notification.css';
         console.error('Error setting access token: ', accessTokenError);
       }
     },
-       
-
-
-        //await exchangeToken(public_token);
    
       onExit: function(err, metadata) {
       if (err != null) { 
-        console.log('Plaid API error: ', err);
+        console.error('Plaid API error: ', err);
       }
       console.log('Exit metadata: ', metadata);
     },
@@ -92,10 +88,8 @@ import './Notification.css';
 
 } else {
   console.error('Plaid library not imported');
-  console.log('Plaid library not imported');
 }
 }catch(error){
-  console.log('ERROR OCCURED ', error);
   console.error('Error: ', error);
 }
   };
