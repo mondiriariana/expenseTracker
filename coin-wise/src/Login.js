@@ -77,8 +77,8 @@ class Login extends Component {
             </form>
             {this.state.error && <p className="error-message">{this.state.error}</p>}
             <div className="additional-links">
-              <a href="#forgot-password"> Forgot Password </a>
-              <a href="#sign-up">Sign up</a>
+              <Link to="/forgotpassword" > Forgot Password</Link>
+              <Link to="/signup" > Sign up</Link>
             </div>
           </div>
         </div>

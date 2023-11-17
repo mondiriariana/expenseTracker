@@ -119,5 +119,9 @@ p {
   border-bottom: none;
 }
 
+.button-none {
+  all: unset;
+}
+
 
 

@@ -8,6 +8,7 @@ import NoPage from "./NoPage";
 import About from "./About";
 import ContactUs from "./ContactUs";
 import Dashboard from "./Dashboard";
+import ForgotPassword from "./ForgotPassword";
 
 
 export default function App() {
@@ -22,6 +23,8 @@ export default function App() {
           <Route path="*" element={<NoPage />} />
           <Route path="contactus" element={<ContactUs />} />
           <Route path="dashboard" element={<Dashboard />} />
+          <Route path="forgotpassword" element={<ForgotPassword />} />
+
         </Route>
       </Routes>
     </BrowserRouter>
