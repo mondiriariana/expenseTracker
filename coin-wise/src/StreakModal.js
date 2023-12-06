@@ -1,48 +1,43 @@
-// StreakModal.js
-
-import React from 'react';
-import Modal from 'react-modal';
+import React, { useState } from 'react';
 import './StreakModal.css';
 
-const StreakModal = ({ isOpen, onRequestClose, input1, input2, setInput1, setInput2 }) => {
+const StreakModal = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const [selectedOption, setSelectedOption] = useState(null);
+  const options = [
+    'Days without spending: 0 days',
+    'Days without eating out: 0 days',
+    'Days without using credit card : 0 days',
+  ];
+
+  const toggleDropdown = () => {
+    setIsOpen(!isOpen);
+  };
+
+  const handleOptionSelect = (option) => {
+    setSelectedOption(option);
+    setIsOpen(false);
+  };
+
   return (
-    <Modal
-      isOpen={isOpen}
-      onRequestClose={onRequestClose}
-      contentLabel="Streak Modal"
-      className="modal-container"
-      overlayClassName="modal-overlay"
-    >
-      <div className="modal-header">
-        <h2>Add Streaks</h2>
-        <button className="close-button" onClick={onRequestClose}>X</button>
-      </div>
-      <div className="modal-content">
-        <label htmlFor="streakType">Streak Type:</label>
-        <input
-          type="text"
-          id="streakType"
-          value={input1}
-          onChange={(e) => setInput1(e.target.value)}
-        />
-        <label htmlFor="streakDays">Streak Days:</label>
-        <input
-          type="number"
-          id="streakDays"
-          value={input2}
-          onChange={(e) => setInput2(e.target.value)}
-        />
-      </div>
-      <div className="modal-buttons">
-        <button className="cancel" onClick={onRequestClose}>Cancel</button>
-        <button className="submit" onClick={() => { 
-          // Handle your submit logic here
-          console.log("Streak Type:", input1);
-          console.log("Streak Days:", input2);
-          onRequestClose();
-        }}>Submit</button>
-      </div>
-    </Modal>
+    <div className="dropdown">
+      <button className="dropdown-toggle button-none" onClick={toggleDropdown}>
+        {selectedOption || 'Select a streak to keep track of'}
+      </button>
+      {isOpen && (
+        <div className="dropdown-menu">
+          {options.map((option) => (
+            <div
+              key={option}
+              className="dropdown-item"
+              onClick={() => handleOptionSelect(option)}
+            >
+              {option}
+            </div>
+          ))}
+        </div>
+      )}
+    </div>
   );
 };
 
